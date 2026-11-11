@@ -861,10 +861,14 @@ def home(lang):
         tabs += ('<button class="tab" role="tab" id="tab-%s" aria-controls="panel-%s" aria-selected="%s" tabindex="%s">'
                  '<span class="ti %s">%s</span><span><b>%s</b><small>%s</small></span><span class="bar"></span></button>') % (
             key, key, 'true' if i == 0 else 'false', 0 if i == 0 else -1, g, ic(icon), name, short)
+        # A 3D render dropped in assets/3d/<key>.png (transparent background) replaces the icon tile.
+        render = os.path.join(ROOT, 'assets', '3d', key + '.png')
+        art = ('<img class="art-3d" src="%sassets/3d/%s.png" alt="" loading="lazy">' % (L[lang]['base'], key)
+               if os.path.exists(render) else '<div class="big">%s</div>' % ic(icon, w='1.6'))
         panels += ('<div class="panel%s" role="tabpanel" id="panel-%s" aria-labelledby="tab-%s">'
-                   '<div class="art %s"><div class="big">%s</div><span class="chip c1">%s</span><span class="chip c2"><bdi>%s</bdi></span></div>'
+                   '<div class="art %s">%s<span class="chip c1">%s</span><span class="chip c2"><bdi>%s</bdi></span></div>'
                    '<div class="body"><h3>%s</h3><p>%s</p><ul class="ticks">%s</ul><div class="tags">%s</div></div></div>') % (
-            ' on' if i == 0 else '', key, key, g, ic(icon, w='1.6'), chip[0], chip[1], name, line,
+            ' on' if i == 0 else '', key, key, g, art, chip[0], chip[1], name, line,
             ''.join('<li>%s</li>' % t for t in ticks), ''.join('<span>%s</span>' % t for t in tags))
 
     steps = ''.join('<div class="step reveal" style="--d:%.2fs"><div class="si">%s</div><h3>%s</h3><p>%s</p></div>' % (

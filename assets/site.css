@@ -537,3 +537,4 @@ form button:disabled { opacity: .5; cursor: not-allowed; }
 
 @media (max-width: 1180px) { .nav .page-link { display: none; } }
 @media (max-width: 860px) { .nav .page-link { display: block; } }
+.panel .art .art-3d { position: relative; width: 82%; max-height: 82%; object-fit: contain; filter: drop-shadow(0 30px 40px rgba(0,0,0,.4)); animation: bob 7s ease-in-out infinite; }

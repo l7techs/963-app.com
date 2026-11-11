@@ -1,4 +1,5 @@
 __pycache__/
 *.pyc
 .DS_Store
+# 3D app-icon render: not used, the site uses the real app icon (assets/app-icon.png)
 assets/3d/app-icon.png

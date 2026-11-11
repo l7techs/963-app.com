@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.l7techs.app963",
+      "sha256_cert_fingerprints": [
+        "REPLACE_WITH_PLAY_APP_SIGNING_KEY_SHA256",
+        "REPLACE_WITH_UPLOAD_KEY_SHA256",
+        "1A:C2:EE:2D:17:45:E1:3C:47:4D:7D:61:56:38:A2:62:54:8B:EA:80:B8:08:78:FC:10:CA:96:FF:9B:FD:5A:DF"
+      ]
+    }
+  }
+]

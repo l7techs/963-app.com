@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /listing/
+
+Sitemap: https://963-app.com/sitemap.xml

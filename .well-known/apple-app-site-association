@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "CHF2B23FTZ.com.l7techs.app963",
+        "appIDs": ["CHF2B23FTZ.com.l7techs.app963"],
+        "paths": ["/listing/*"],
+        "components": [{ "/": "/listing/*", "comment": "Shared 963 listings" }]
+      }
+    ]
+  }
+}

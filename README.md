@@ -20,7 +20,7 @@ python tools/build.py
 ```
 
 Hand-written files: `404.html` and `listing/index.html` (keep them the same), `assets/open-app.js`, `.well-known/*`, `CNAME`, `robots.txt`.
-`python tools/make_images.py` redraws the placeholder icons and the link preview image (`assets/og-image.png`, 1200×630).
+`python tools/make_images.py` makes the logo, icons and link preview image from `assets/app-icon.png` (`assets/og-image.png`, 1200×630).
 
 Preview locally: `python -m http.server 8963`, then open <http://localhost:8963>.
 
@@ -28,7 +28,7 @@ Preview locally: `python -m http.server 8963`, then open <http://localhost:8963>
 
 - In `tools/build.py` set `LAUNCHED = True` and replace `APP_STORE_ID` (also in `assets/open-app.js`). Then rebuild. The store badges stop saying "Coming soon" and start linking to the stores.
 - In `.well-known/assetlinks.json` replace the two `REPLACE_WITH_…` values with the SHA-256 fingerprints from Play Console → App integrity. The third fingerprint is the local debug keystore, for testing.
-- Replace the placeholder logo and icons in `assets/` once the final 963 artwork exists.
+- The logo and icons come from `assets/app-icon.png`, a copy of the app's `assets/branding/app_icon.png`. If the app icon changes, copy it again and run `python tools/make_images.py`.
 
 ## Forms
 

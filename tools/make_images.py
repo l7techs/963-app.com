@@ -2,8 +2,7 @@
 
     python tools/make_images.py
 
-Placeholder art drawn from the brand colours until the final 963 artwork exists.
-Replace assets/og-image.png (1200x630) and the icons when it does.
+Icons come from assets/app-icon.png (copy of the app's assets/branding/app_icon.png).
 """
 import os
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, features
@@ -59,15 +58,8 @@ def gold_text(base, xy, text, font, anchor='mm'):
 
 
 def icon(size, rounded=True):
-    s = size * 4
-    img = gradient(s, s, FOREST)
-    d = ImageDraw.Draw(img, 'RGBA')
-    c, r = s / 2, s * 0.25
-    d.rectangle([c - r, c - r, c + r, c + r], outline=(185, 167, 121, 56), width=max(2, s // 60))
-    dd = r * 1.41
-    d.polygon([(c, c - dd), (c + dd, c), (c, c + dd), (c - dd, c)], outline=(185, 167, 121, 56), width=max(2, s // 60))
-    gold_text(img, (c, c + s * 0.02), '963', ImageFont.truetype(F_BOLD, int(s * 0.34)))
-    img = img.resize((size, size), Image.LANCZOS)
+    # assets/app-icon.png is the app's 1024px icon (assets/branding/app_icon.png in the app repo).
+    img = Image.open(os.path.join(A, 'app-icon.png')).convert('RGB').resize((size, size), Image.LANCZOS)
     if rounded:
         m = Image.new('L', (size * 4, size * 4), 0)
         ImageDraw.Draw(m).rounded_rectangle([0, 0, size * 4 - 1, size * 4 - 1], radius=size * 4 * 0.23, fill=255)
@@ -109,5 +101,6 @@ if __name__ == '__main__':
     icon(180, rounded=False).save(os.path.join(A, 'apple-touch-icon.png'), optimize=True)
     icon(192).save(os.path.join(A, 'icon-192.png'), optimize=True)
     icon(512).save(os.path.join(A, 'icon-512.png'), optimize=True)
+    icon(256).save(os.path.join(A, 'logo.png'), optimize=True)
     og()
     print('images written; raqm:', features.check('raqm'))

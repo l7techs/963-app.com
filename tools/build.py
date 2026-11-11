@@ -160,7 +160,7 @@ def page(lang, name, title, body, script='', home=False):
 <meta property="og:image" content="{site}/assets/og-image.png">
 <meta property="og:locale" content="{locale}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="{base}assets/logo.svg">
+<link rel="icon" type="image/png" sizes="256x256" href="{base}assets/logo.png">
 <link rel="icon" type="image/png" sizes="192x192" href="{base}assets/icon-192.png">
 <link rel="apple-touch-icon" href="{base}assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +173,7 @@ def page(lang, name, title, body, script='', home=False):
 <a class="sr" href="#main">{skip}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="963 — {home_label}"><img src="{base}assets/logo.svg" alt="" width="38" height="38"><bdi>963</bdi></a>
+    <a class="brand" href="./" aria-label="963 — {home_label}"><img src="{base}assets/logo.png" alt="" width="38" height="38"><bdi>963</bdi></a>
     <nav class="nav" id="site-nav" aria-label="{nav_label}">{links}</nav>
     <div class="tools">
       <a class="icon-btn lang-btn" href="{other_href}" hreflang="{other_lang}" lang="{other_lang}" data-lang="{other_lang}">{other_label}</a>
@@ -189,7 +189,7 @@ def page(lang, name, title, body, script='', home=False):
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="./"><img src="{base}assets/logo.svg" alt="" width="38" height="38"><bdi>963</bdi></a>
+        <a class="brand" href="./"><img src="{base}assets/logo.png" alt="" width="38" height="38"><bdi>963</bdi></a>
         <p>{tagline}</p>
       </div>
       <div><h4>{foot_app_t}</h4><nav>{foot_app}</nav></div>
@@ -999,7 +999,7 @@ def home(lang):
     <div class="cta-box reveal">
       <div class="pattern" aria-hidden="true"></div><div class="cta-ring" aria-hidden="true"></div><div class="cta-ring r2" aria-hidden="true"></div>
       <div><h2>{cta_h}</h2><p>{cta_p}</p>{stores}</div>
-      <div class="cta-logo"><img src="{base}assets/logo.svg" alt="963" width="220" height="220"></div>
+      <div class="cta-logo"><img src="{base}assets/logo.png" alt="963" width="220" height="220"></div>
     </div>
   </div>
 </section>

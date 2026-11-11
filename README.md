@@ -20,6 +20,7 @@ python tools/build.py
 ```
 
 Hand-written files: `404.html` and `listing/index.html` (keep them the same), `assets/open-app.js`, `.well-known/*`, `CNAME`, `robots.txt`.
+`python tools/make_3d.py` makes the web versions of the 3D renders in `assets/3d/` (and puts the app icon on the hero phone; the 3D app-icon render is not used).
 `python tools/make_images.py` makes the logo, icons and link preview image from `assets/app-icon.png` (`assets/og-image.png`, 1200×630).
 
 Preview locally: `python -m http.server 8963`, then open <http://localhost:8963>.

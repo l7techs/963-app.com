@@ -5,8 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.l7techs.app963",
       "sha256_cert_fingerprints": [
-        "REPLACE_WITH_PLAY_APP_SIGNING_KEY_SHA256",
-        "REPLACE_WITH_UPLOAD_KEY_SHA256",
+        "65:0C:A3:BF:24:C3:E4:73:BF:FA:2F:FE:18:B4:49:3D:F8:95:04:19:E1:A0:D3:A8:A2:0D:60:6C:5B:03:02:93",
+        "77:6E:56:02:25:42:4B:D2:9C:48:83:0F:39:BB:19:0D:A2:4E:46:E4:08:0D:7E:2E:E6:73:37:AA:32:B5:13:85",
         "1A:C2:EE:2D:17:45:E1:3C:47:4D:7D:61:56:38:A2:62:54:8B:EA:80:B8:08:78:FC:10:CA:96:FF:9B:FD:5A:DF"
       ]
     }

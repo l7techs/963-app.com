@@ -23,7 +23,7 @@ PROVIDER_AR = '<span dir="ltr">Mohamad Anas Yagop (L7 Techs)</span>'
 UPDATED_EN = 'November 11, 2026'
 UPDATED_AR = '11 تشرين الثاني 2026'
 PLAY = 'https://play.google.com/store/apps/details?id=com.l7techs.app963'
-APP_STORE = 'https://apps.apple.com/app/idAPP_STORE_ID'  # TODO(owner): numeric App Store id
+APP_STORE = 'https://apps.apple.com/app/id6833439652'
 # Until the app is published the store badges say "Coming soon" and don't link anywhere.
 LAUNCHED = False
 

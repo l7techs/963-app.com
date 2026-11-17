@@ -20,8 +20,8 @@ SITE = 'https://963-app.com'
 EMAIL = 'level7techs@gmail.com'
 PROVIDER_EN = 'Mohamad Anas Yagop (L7 Techs)'
 PROVIDER_AR = '<span dir="ltr">Mohamad Anas Yagop (L7 Techs)</span>'
-UPDATED_EN = 'November 11, 2026'
-UPDATED_AR = '11 تشرين الثاني 2026'
+UPDATED_EN = 'November 17, 2026'
+UPDATED_AR = '17 تشرين الثاني 2026'
 PLAY = 'https://play.google.com/store/apps/details?id=com.l7techs.app963'
 APP_STORE = 'https://apps.apple.com/app/id6833439652'
 # Until the app is published the store badges say "Coming soon" and don't link anywhere.
@@ -252,7 +252,7 @@ def privacy(lang):
                 'To prevent fraud, spam and abuse, and to keep the service secure. When a conversation is reported, our team may read it to handle the report.',
                 'To understand how the app is used and improve it.')),
             ('3. What other users see',
-             '<p>When you publish a listing or request, its details and photos, governorate, city, map location (if you set one), your display or business name, profile photo, bio, ratings and the contact numbers you add are public. Chat messages are seen only by the people in the conversation. A booking request is seen by you and the listing owner. Your email address and the phone number on your account are never shown to other users unless you add them yourself.</p>'),
+             '<p>When you publish a listing or request, its details and photos, governorate, city, map location (if you set one), your display or business name, profile photo, bio, ratings and the contact numbers you add are public. Chat messages are seen only by the people in the conversation. A booking request is seen by you and the listing owner. Your email address and the phone number on your account are never shown to other users unless you add them yourself.</p><p>When you call, message or meet another user, or give them your number, address or other details, what they do with it is their responsibility, not 963’s. Share only what the deal needs.</p>'),
             ('4. Service providers we share data with',
              '<p>We share information only with providers who help us run 963, and only as needed:</p>' + ul(
                  '<strong>Supabase</strong>: database, authentication and file storage (hosts account data, listings, messages and photos).',
@@ -270,7 +270,7 @@ def privacy(lang):
                 'Backups maintained by our providers are overwritten on their regular schedule.')),
             ('7. Your rights and choices', ul(
                 '<strong>Access and correct:</strong> view and edit your profile, listings and requests in the app at any time.',
-                '<strong>Delete:</strong> delete individual listings or requests at any time, or your entire account from <em>Profile → Settings → Delete account</em>, or through our <a href="delete-account.html">account deletion page</a>.',
+                '<strong>Delete:</strong> delete individual listings or requests at any time, or your entire account from <em>Profile → Delete account</em> (at the bottom), or through our <a href="delete-account.html">account deletion page</a>.',
                 '<strong>Location:</strong> allow or deny it in the app or your device settings.',
                 '<strong>Notifications:</strong> turn push notifications off in your device settings.',
                 'For any other request about your data, <a href="contact.html">contact us</a>.')),
@@ -315,7 +315,7 @@ def privacy(lang):
                 'لمنع الاحتيال والرسائل المزعجة وإساءة الاستخدام وحماية الخدمة. عند الإبلاغ عن محادثة قد يقرؤها فريقنا لمعالجة البلاغ.',
                 'لفهم طريقة استخدام التطبيق وتحسينه.')),
             ('3. ما يراه المستخدمون الآخرون',
-             '<p>عندما تنشر إعلاناً أو طلباً تصبح تفاصيله وصوره والمحافظة والمدينة والموقع على الخريطة (إن حددته) واسمك أو اسم نشاطك وصورتك ونبذتك وتقييماتك وأرقام التواصل التي تضيفها ظاهرة للعموم. رسائل المحادثة يراها طرفا المحادثة فقط. طلب الحجز تراه أنت وصاحب الإعلان. لا يظهر بريدك الإلكتروني ولا رقم هاتف حسابك لأي مستخدم إلا إذا أضفته بنفسك.</p>'),
+             '<p>عندما تنشر إعلاناً أو طلباً تصبح تفاصيله وصوره والمحافظة والمدينة والموقع على الخريطة (إن حددته) واسمك أو اسم نشاطك وصورتك ونبذتك وتقييماتك وأرقام التواصل التي تضيفها ظاهرة للعموم. رسائل المحادثة يراها طرفا المحادثة فقط. طلب الحجز تراه أنت وصاحب الإعلان. لا يظهر بريدك الإلكتروني ولا رقم هاتف حسابك لأي مستخدم إلا إذا أضفته بنفسك.</p><p>عندما تتصل بمستخدم آخر أو تراسله أو تلتقي به أو تعطيه رقمك أو عنوانك أو بيانات أخرى، فما يفعله بها مسؤوليته هو وليس مسؤولية <bdi>963</bdi>. شارك فقط ما تحتاجه الصفقة.</p>'),
             ('4. مزوّدو الخدمات الذين نشاركهم البيانات',
              '<p>نشارك المعلومات فقط مع المزوّدين الذين يساعدوننا في تشغيل <bdi>963</bdi>، وبقدر الحاجة:</p>' + ul(
                  '<strong>Supabase</strong>: قاعدة البيانات وتسجيل الدخول وتخزين الملفات (تستضيف بيانات الحسابات والإعلانات والرسائل والصور).',
@@ -333,7 +333,7 @@ def privacy(lang):
                 'النسخ الاحتياطية لدى مزوّدينا تُستبدل وفق جدولها المعتاد.')),
             ('7. حقوقك وخياراتك', ul(
                 '<strong>الاطلاع والتصحيح:</strong> يمكنك عرض ملفك وإعلاناتك وطلباتك وتعديلها في التطبيق في أي وقت.',
-                '<strong>الحذف:</strong> احذف أي إعلان أو طلب في أي وقت، أو احذف حسابك بالكامل من <em>حسابي ← الإعدادات ← حذف الحساب</em>، أو من <a href="delete-account.html">صفحة حذف الحساب</a>.',
+                '<strong>الحذف:</strong> احذف أي إعلان أو طلب في أي وقت، أو احذف حسابك بالكامل من <em>حسابي ← حذف الحساب</em> (في أسفل الصفحة)، أو من <a href="delete-account.html">صفحة حذف الحساب</a>.',
                 '<strong>الموقع:</strong> اسمح به أو ارفضه من التطبيق أو من إعدادات جهازك.',
                 '<strong>الإشعارات:</strong> أوقفها من إعدادات جهازك.',
                 'لأي طلب آخر يخص بياناتك <a href="contact.html">تواصل معنا</a>.')),
@@ -365,7 +365,7 @@ def terms(lang):
     if lang == 'en':
         s = [
             ('1. Acceptance', '<p>By using the 963 app or website you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>. If you don’t agree, please don’t use 963.</p>'),
-            ('2. What 963 is', '<p>963 is a classifieds and services platform with sections for cars, real estate, marketplace goods, equipment and services. It lets users post listings and wanted requests, exchange quotes and booking requests, chat, and rate each other. We are not a seller, buyer, landlord, broker, dealer or service provider.</p>'),
+            ('2. What 963 is', '<p>963 is a classifieds and services platform with sections for cars, real estate, marketplace goods, equipment and services. It lets users post listings and wanted requests, exchange quotes and booking requests, chat, and rate each other. We are not a seller, buyer, landlord, broker, dealer or service provider: 963 is only a platform that connects people who offer something with people who need it.</p>'),
             ('3. Accounts', '<p>You must be at least 16 years old. Your account details must be accurate and you must not impersonate anyone. You are responsible for keeping your password private and for all activity on your account. Business accounts must use their real business name. We may suspend or delete accounts that break these Terms.</p>'),
             ('4. Review before publishing', '<p>Our team reviews listings and requests before they go live. We may reject them, set or change how long they stay live, or remove them at any time. Review does not mean we have verified, endorse or guarantee any listing, request or user. A “Verified” badge means only that we checked the identity of the account owner or business.</p>'),
             ('5. Listings and requests', ul(
@@ -382,23 +382,24 @@ def terms(lang):
                 'sexual content or services, gambling, pyramid schemes, unlicensed money exchange or loans;',
                 'anything else that is illegal, hateful, or harms other people.')),
             ('7. We are not a party to deals', '<p>963 is not a party to any sale, rental, service or other agreement between users. We take no payments, hold no money and offer no payment through the app. We do not guarantee the quality, safety, legality or existence of items, properties or services, or that users will keep their word. Meet in safe places, inspect before paying, check property and car documents, and agree in writing on price, timing and responsibilities. Never send money or a deposit to someone you have not verified.</p>'),
-            ('8. Quotes and bookings', '<p>A quote is a provider’s offer in reply to your request; a booking request asks the owner for a date or time. Neither is a binding contract made through 963. The final agreement, price and payment are between the users, at their own responsibility. Cancel or decline politely and in good time.</p>'),
-            ('9. Chat', '<p>In-app chat is for talking about listings, requests, quotes and bookings. No harassment, threats, hate, spam, scams, or asking for passwords, codes or bank details. You can block and report users. We may review a reported conversation to handle the report, and remove messages or accounts that break these Terms.</p>'),
-            ('10. Ratings and reviews', '<p>Reviews must reflect a real dealing with the other user and must not be offensive or include personal data. Don’t review yourself or offer anything in return for reviews. We may remove reviews that break these rules.</p>'),
-            ('11. Promoted ads', '<p>963 shows promoted ads in spaces run by our team. The advertiser is responsible for the ad’s content and for what they offer; showing an ad does not mean we endorse it.</p>'),
-            ('12. Prohibited behaviour', '<p>No fraudulent or misleading content, impersonating a person or business, scraping or copying user data, automated access, getting around review or a ban, or anything that harms the service or its users.</p>'),
-            ('13. Your content', '<p>You keep ownership of what you post. You give us a non-exclusive, free licence to host, show, resize and share it inside 963 and on our link pages so the service can work. You confirm you have the right to post it.</p>'),
-            ('14. Limitation of liability', '<p>963 is provided “as is” and “as available”. To the extent the law allows, we are not liable for any loss or damage arising from dealings between users, from content posted by users or advertisers, or from interruptions, errors or loss of data.</p>'),
-            ('15. Ending your use', '<p>You can stop using 963 and delete your account at any time from <em>Profile → Settings → Delete account</em> or on our <a href="delete-account.html">account deletion page</a>. We may suspend or end your access if you break these Terms.</p>'),
-            ('16. Changes', '<p>We may update these Terms from time to time. We will change the date above and tell you about important changes in the app. Continuing to use 963 means you accept the updated Terms.</p>'),
-            ('17. Contact', '<p>963 is provided by %s. Questions? Email <a href="mailto:%s" dir="ltr">%s</a> or use the <a href="contact.html">Contact Us</a> page.</p>' % (PROVIDER_EN, EMAIL, EMAIL)),
+            ('8. Users are responsible for what they offer', '<p>963 only connects people. Every listing, request, quote, message and review is posted by a user, and every promoted ad comes from its advertiser; they alone are responsible for it. We do not inspect items or properties, check the work of service providers, or confirm prices, descriptions, photos or documents. We are not responsible for a bad or unfinished service; an item, car or property that is faulty, misdescribed or not as shown; a user who is late, does not show up or does not pay; or any loss, damage, injury or fraud caused by another user, inside or outside the app. A “Verified” badge only means we checked the identity of the account owner or business at that time, and ratings are other users’ opinions: neither is a guarantee.</p>'),
+            ('9. Quotes and bookings', '<p>A quote is a provider’s offer in reply to your request; a booking request asks the owner for a date or time. Neither is a binding contract made through 963. The final agreement, price and payment are between the users, at their own responsibility. Cancel or decline politely and in good time.</p>'),
+            ('10. Chat', '<p>In-app chat is for talking about listings, requests, quotes and bookings. No harassment, threats, hate, spam, scams, or asking for passwords, codes or bank details. You can block and report users. We may review a reported conversation to handle the report, and remove messages or accounts that break these Terms.</p>'),
+            ('11. Ratings and reviews', '<p>Reviews must reflect a real dealing with the other user and must not be offensive or include personal data. Don’t review yourself or offer anything in return for reviews. We may remove reviews that break these rules.</p>'),
+            ('12. Promoted ads', '<p>963 shows promoted ads in spaces run by our team. The advertiser is responsible for the ad’s content and for what they offer; showing an ad does not mean we endorse it.</p>'),
+            ('13. Prohibited behaviour', '<p>No fraudulent or misleading content, impersonating a person or business, scraping or copying user data, automated access, getting around review or a ban, or anything that harms the service or its users.</p>'),
+            ('14. Your content', '<p>You keep ownership of what you post. You give us a non-exclusive, free licence to host, show, resize and share it inside 963 and on our link pages so the service can work. You confirm you have the right to post it.</p>'),
+            ('15. Limitation of liability', '<p>963 is provided “as is” and “as available”. To the extent the law allows, we are not liable for any loss or damage arising from dealings between users, from content posted by users or advertisers, or from interruptions, errors or loss of data. Any dispute about a deal, a service or an item is between the users involved. When something is reported we may remove content or suspend accounts, but we do not mediate, refund or compensate.</p>'),
+            ('16. Ending your use', '<p>You can stop using 963 and delete your account at any time from <em>Profile → Delete account</em> (at the bottom) or on our <a href="delete-account.html">account deletion page</a>. We may suspend or end your access if you break these Terms.</p>'),
+            ('17. Changes', '<p>We may update these Terms from time to time. We will change the date above and tell you about important changes in the app. Continuing to use 963 means you accept the updated Terms.</p>'),
+            ('18. Contact', '<p>963 is provided by %s. Questions? Email <a href="mailto:%s" dir="ltr">%s</a> or use the <a href="contact.html">Contact Us</a> page.</p>' % (PROVIDER_EN, EMAIL, EMAIL)),
         ]
         head = ('Terms of Service', 'Last updated: ' + UPDATED_EN)
         title = 'Terms of Service — 963'
     else:
         s = [
             ('1. القبول', '<p>باستخدامك تطبيق <bdi>963</bdi> أو موقعه فإنك توافق على هذه الشروط وعلى <a href="privacy.html">سياسة الخصوصية</a>. إن لم توافق عليها يرجى عدم استخدام <bdi>963</bdi>.</p>'),
-            ('2. ما هو <bdi>963</bdi>', '<p><bdi>963</bdi> منصة إعلانات مبوّبة وخدمات تضم أقسام السيارات والعقارات والسوق والمعدات والخدمات. تتيح للمستخدمين نشر الإعلانات والطلبات، وتبادل عروض الأسعار وطلبات الحجز، والمحادثة، وتقييم بعضهم. لسنا بائعين ولا مشترين ولا مؤجّرين ولا وسطاء ولا معارض ولا مقدّمي خدمات.</p>'),
+            ('2. ما هو <bdi>963</bdi>', '<p><bdi>963</bdi> منصة إعلانات مبوّبة وخدمات تضم أقسام السيارات والعقارات والسوق والمعدات والخدمات. تتيح للمستخدمين نشر الإعلانات والطلبات، وتبادل عروض الأسعار وطلبات الحجز، والمحادثة، وتقييم بعضهم. لسنا بائعين ولا مشترين ولا مؤجّرين ولا وسطاء ولا معارض ولا مقدّمي خدمات، ويقتصر دورنا على أن نكون منصة تربط من يعرض شيئاً بمن يحتاجه.</p>'),
             ('3. الحسابات', '<p>يجب ألا يقل عمرك عن 16 عاماً، وأن تكون بيانات حسابك صحيحة، وألا تنتحل شخصية أحد. أنت مسؤول عن سرية كلمة المرور وعن كل نشاط يتم عبر حسابك. يجب أن تستخدم الحسابات التجارية اسم النشاط الحقيقي. يحق لنا إيقاف أو حذف الحسابات المخالفة لهذه الشروط.</p>'),
             ('4. المراجعة قبل النشر', '<p>يراجع فريقنا الإعلانات والطلبات قبل نشرها، ويحق لنا رفضها أو تحديد مدة ظهورها أو تغييرها أو إزالتها في أي وقت. المراجعة لا تعني أننا تحققنا من أي إعلان أو طلب أو مستخدم أو أننا نضمنه. شارة «موثّق» تعني فقط أننا تحققنا من هوية صاحب الحساب أو نشاطه.</p>'),
             ('5. الإعلانات والطلبات', ul(
@@ -415,16 +416,17 @@ def terms(lang):
                 'المحتوى أو الخدمات الجنسية، والقمار، والتسويق الهرمي، وتصريف العملات أو القروض دون ترخيص؛',
                 'أي شيء آخر مخالف للقانون أو يحض على الكراهية أو يؤذي الآخرين.')),
             ('7. لسنا طرفاً في الصفقات', '<p><bdi>963</bdi> ليس طرفاً في أي بيع أو إيجار أو خدمة أو اتفاق آخر بين المستخدمين. لا نستلم أي مبالغ ولا نحتفظ بأموال ولا نوفّر الدفع داخل التطبيق. لا نضمن جودة الأغراض أو العقارات أو الخدمات أو سلامتها أو قانونيتها أو وجودها، ولا التزام المستخدمين بوعودهم. التقِ في أماكن آمنة، وعاين قبل الدفع، وتحقق من أوراق العقار والسيارة، واتفق كتابياً على السعر والموعد والمسؤوليات. لا ترسل مالاً أو عربوناً لشخص لم تتأكد منه.</p>'),
-            ('8. عروض الأسعار والحجوزات', '<p>عرض السعر هو عرض من مقدّم الخدمة رداً على طلبك، وطلب الحجز هو طلب موعد أو تاريخ من صاحب الإعلان. لا يُعد أي منهما عقداً ملزماً عبر <bdi>963</bdi>. الاتفاق النهائي والسعر والدفع بين المستخدمين وعلى مسؤوليتهم. ألغِ أو ارفض بلباقة وفي وقت مناسب.</p>'),
-            ('9. المحادثة', '<p>المحادثة داخل التطبيق للتواصل حول الإعلانات والطلبات والعروض والحجوزات. يُمنع الإزعاج والتهديد والكراهية والرسائل المزعجة والاحتيال وطلب كلمات المرور أو رموز الدخول أو البيانات المصرفية. يمكنك حظر المستخدمين والإبلاغ عنهم. قد نراجع المحادثة المُبلَّغ عنها لمعالجة البلاغ، ونزيل الرسائل أو الحسابات المخالفة.</p>'),
-            ('10. التقييمات', '<p>يجب أن يعكس التقييم تعاملاً حقيقياً مع المستخدم الآخر، وألا يكون مسيئاً أو يتضمن بيانات شخصية. لا تقيّم نفسك ولا تقدّم مقابلاً للحصول على تقييم. يحق لنا حذف التقييمات المخالفة.</p>'),
-            ('11. الإعلانات الترويجية', '<p>يعرض <bdi>963</bdi> إعلانات ترويجية في مساحات يديرها فريقنا. المعلن مسؤول عن محتوى إعلانه وعمّا يقدّمه، وعرض الإعلان لا يعني أننا نزكّيه.</p>'),
-            ('12. السلوك المحظور', '<p>يُمنع المحتوى الاحتيالي أو المضلل، وانتحال صفة شخص أو جهة، وجمع بيانات المستخدمين أو نسخها، والوصول الآلي، والتحايل على المراجعة أو الحظر، وأي شيء يضر بالخدمة أو بمستخدميها.</p>'),
-            ('13. المحتوى الذي تنشره', '<p>يبقى ما تنشره ملكاً لك، وتمنحنا ترخيصاً مجانياً غير حصري لاستضافته وعرضه وتغيير حجمه ومشاركته داخل <bdi>963</bdi> وصفحات الروابط الخاصة بنا لكي تعمل الخدمة. وتؤكد أن لك الحق في نشره.</p>'),
-            ('14. حدود المسؤولية', '<p>يُقدَّم <bdi>963</bdi> «كما هو» و«حسب توفره». في الحدود التي يسمح بها القانون لا نتحمل مسؤولية أي خسارة أو ضرر ينتج عن التعامل بين المستخدمين، أو عن محتوى ينشره المستخدمون أو المعلنون، أو عن انقطاع الخدمة أو أخطائها أو فقدان البيانات.</p>'),
-            ('15. إنهاء الاستخدام', '<p>يمكنك التوقف عن استخدام <bdi>963</bdi> وحذف حسابك في أي وقت من <em>حسابي ← الإعدادات ← حذف الحساب</em> أو من <a href="delete-account.html">صفحة حذف الحساب</a>. ويحق لنا إيقاف وصولك أو إنهاؤه إذا خالفت هذه الشروط.</p>'),
-            ('16. التعديلات', '<p>قد نحدّث هذه الشروط من وقت لآخر. سنغيّر التاريخ أعلاه ونُعلمك بالتغييرات المهمة داخل التطبيق. يُعد استمرارك في استخدام <bdi>963</bdi> موافقة على الشروط المحدّثة.</p>'),
-            ('17. التواصل', '<p>يقدّم <bdi>963</bdi> %s. لأي سؤال راسلنا على <a href="mailto:%s" dir="ltr">%s</a> أو استخدم صفحة <a href="contact.html">اتصل بنا</a>.</p>' % (PROVIDER_AR, EMAIL, EMAIL)),
+            ('8. المستخدمون مسؤولون عمّا يقدّمونه', '<p>يقتصر دور <bdi>963</bdi> على الربط بين الناس. كل إعلان أو طلب أو عرض سعر أو رسالة أو تقييم ينشره مستخدم، وكل إعلان ترويجي يأتي من معلنه، وهم وحدهم المسؤولون عنه. لا نعاين الأغراض أو العقارات، ولا نتحقق من عمل مقدّمي الخدمات، ولا نؤكد الأسعار أو الأوصاف أو الصور أو الوثائق. لا نتحمل مسؤولية خدمة سيئة أو غير مكتملة، أو غرض أو سيارة أو عقار معيب أو مخالف لوصفه أو لصوره، أو مستخدم يتأخر أو لا يحضر أو لا يدفع، أو أي خسارة أو ضرر أو إصابة أو احتيال يسببه مستخدم آخر داخل التطبيق أو خارجه. شارة «موثّق» تعني فقط أننا تحققنا من هوية صاحب الحساب أو نشاطه في حينه، والتقييمات آراء مستخدمين آخرين، ولا يُعد أي منهما ضماناً.</p>'),
+            ('9. عروض الأسعار والحجوزات', '<p>عرض السعر هو عرض من مقدّم الخدمة رداً على طلبك، وطلب الحجز هو طلب موعد أو تاريخ من صاحب الإعلان. لا يُعد أي منهما عقداً ملزماً عبر <bdi>963</bdi>. الاتفاق النهائي والسعر والدفع بين المستخدمين وعلى مسؤوليتهم. ألغِ أو ارفض بلباقة وفي وقت مناسب.</p>'),
+            ('10. المحادثة', '<p>المحادثة داخل التطبيق للتواصل حول الإعلانات والطلبات والعروض والحجوزات. يُمنع الإزعاج والتهديد والكراهية والرسائل المزعجة والاحتيال وطلب كلمات المرور أو رموز الدخول أو البيانات المصرفية. يمكنك حظر المستخدمين والإبلاغ عنهم. قد نراجع المحادثة المُبلَّغ عنها لمعالجة البلاغ، ونزيل الرسائل أو الحسابات المخالفة.</p>'),
+            ('11. التقييمات', '<p>يجب أن يعكس التقييم تعاملاً حقيقياً مع المستخدم الآخر، وألا يكون مسيئاً أو يتضمن بيانات شخصية. لا تقيّم نفسك ولا تقدّم مقابلاً للحصول على تقييم. يحق لنا حذف التقييمات المخالفة.</p>'),
+            ('12. الإعلانات الترويجية', '<p>يعرض <bdi>963</bdi> إعلانات ترويجية في مساحات يديرها فريقنا. المعلن مسؤول عن محتوى إعلانه وعمّا يقدّمه، وعرض الإعلان لا يعني أننا نزكّيه.</p>'),
+            ('13. السلوك المحظور', '<p>يُمنع المحتوى الاحتيالي أو المضلل، وانتحال صفة شخص أو جهة، وجمع بيانات المستخدمين أو نسخها، والوصول الآلي، والتحايل على المراجعة أو الحظر، وأي شيء يضر بالخدمة أو بمستخدميها.</p>'),
+            ('14. المحتوى الذي تنشره', '<p>يبقى ما تنشره ملكاً لك، وتمنحنا ترخيصاً مجانياً غير حصري لاستضافته وعرضه وتغيير حجمه ومشاركته داخل <bdi>963</bdi> وصفحات الروابط الخاصة بنا لكي تعمل الخدمة. وتؤكد أن لك الحق في نشره.</p>'),
+            ('15. حدود المسؤولية', '<p>يُقدَّم <bdi>963</bdi> «كما هو» و«حسب توفره». في الحدود التي يسمح بها القانون لا نتحمل مسؤولية أي خسارة أو ضرر ينتج عن التعامل بين المستخدمين، أو عن محتوى ينشره المستخدمون أو المعلنون، أو عن انقطاع الخدمة أو أخطائها أو فقدان البيانات. أي خلاف حول صفقة أو خدمة أو غرض يكون بين المستخدمين المعنيين. عند الإبلاغ قد نزيل المحتوى أو نوقف الحسابات، لكننا لا نتوسط ولا نعيد أموالاً ولا نقدّم تعويضاً.</p>'),
+            ('16. إنهاء الاستخدام', '<p>يمكنك التوقف عن استخدام <bdi>963</bdi> وحذف حسابك في أي وقت من <em>حسابي ← حذف الحساب</em> (في أسفل الصفحة) أو من <a href="delete-account.html">صفحة حذف الحساب</a>. ويحق لنا إيقاف وصولك أو إنهاؤه إذا خالفت هذه الشروط.</p>'),
+            ('17. التعديلات', '<p>قد نحدّث هذه الشروط من وقت لآخر. سنغيّر التاريخ أعلاه ونُعلمك بالتغييرات المهمة داخل التطبيق. يُعد استمرارك في استخدام <bdi>963</bdi> موافقة على الشروط المحدّثة.</p>'),
+            ('18. التواصل', '<p>يقدّم <bdi>963</bdi> %s. لأي سؤال راسلنا على <a href="mailto:%s" dir="ltr">%s</a> أو استخدم صفحة <a href="contact.html">اتصل بنا</a>.</p>' % (PROVIDER_AR, EMAIL, EMAIL)),
         ]
         head = ('شروط الاستخدام', 'آخر تحديث: ' + UPDATED_AR)
         title = 'شروط الاستخدام — ⁦963⁩'
@@ -493,7 +495,7 @@ def delete_account(lang):
 
 <div class="card">
 <h2>Option 1 — Delete in the app (instant)</h2>
-<ol class="steps"><li>Open the 963 app and sign in.</li><li>Go to <strong>Profile → Settings</strong>.</li><li>Tap <strong>Delete account</strong> and confirm.</li></ol>
+<ol class="steps"><li>Open the 963 app and sign in.</li><li>Go to <strong>Profile</strong> and scroll to the bottom.</li><li>Tap <strong>Delete account</strong> and confirm.</li></ol>
 <p>Your account and data are erased immediately.</p>
 </div>
 
@@ -534,7 +536,7 @@ def delete_account(lang):
 
 <div class="card">
 <h2>الطريقة 1 — الحذف من التطبيق (فوري)</h2>
-<ol class="steps"><li>افتح تطبيق <bdi>963</bdi> وسجّل الدخول.</li><li>اذهب إلى <strong>حسابي ← الإعدادات</strong>.</li><li>اضغط <strong>حذف الحساب</strong> وأكّد.</li></ol>
+<ol class="steps"><li>افتح تطبيق <bdi>963</bdi> وسجّل الدخول.</li><li>اذهب إلى <strong>حسابي</strong> وانزل إلى أسفل الصفحة.</li><li>اضغط <strong>حذف الحساب</strong> وأكّد.</li></ol>
 <p>يُحذف حسابك وبياناته فوراً.</p>
 </div>
 
@@ -695,7 +697,7 @@ H = {
              ('I can’t find what I need. What now?', 'Post a request from the Requests tab: say what you need, where and when. Sellers and providers see it and can send you a quote or contact you.'),
              ('What does the “Verified” badge mean?', 'Our team has checked the identity of the account owner or their business. It is not a guarantee of what they offer. Ratings are written by users who dealt with them.'),
              ('When can I download it?', '963 is launching soon on the App Store and Google Play. This page will link to both as soon as it’s live.'),
-             ('How do I delete my account?', 'In the app: Profile → Settings → Delete account. You can also ask from our <a href="delete-account.html">account deletion page</a>.')],
+             ('How do I delete my account?', 'In the app: Profile → Delete account (at the bottom). You can also ask from our <a href="delete-account.html">account deletion page</a>.')],
         cta_h='Your next deal is one app away.',
         cta_p='963 is coming to iPhone and Android. Free to download, free to post.',
     ),
@@ -809,7 +811,7 @@ H = {
              ('لم أجد ما أبحث عنه، ماذا أفعل؟', 'انشر طلباً من تبويب «الطلبات»: اكتب ما تحتاجه والمكان والموعد. يرى البائعون ومقدّمو الخدمات طلبك ويمكنهم إرسال عرض سعر أو التواصل معك.'),
              ('ما معنى شارة «موثّق»؟', 'تعني أن فريقنا تحقق من هوية صاحب الحساب أو نشاطه التجاري. لا تعني أننا نضمن ما يعرضه، والتقييمات يكتبها المستخدمون الذين تعاملوا معه.'),
              ('متى يمكنني تحميل التطبيق؟', 'يصل ⁦963⁩ قريباً إلى App Store وGoogle Play. ستضع هذه الصفحة رابط المتجرين فور توفّره.'),
-             ('كيف أحذف حسابي؟', 'من التطبيق: حسابي ← الإعدادات ← حذف الحساب. ويمكنك أيضاً الطلب من <a href="delete-account.html">صفحة حذف الحساب</a>.')],
+             ('كيف أحذف حسابي؟', 'من التطبيق: حسابي ← حذف الحساب (في أسفل الصفحة). ويمكنك أيضاً الطلب من <a href="delete-account.html">صفحة حذف الحساب</a>.')],
         cta_h='صفقتك القادمة على بُعد تطبيق.',
         cta_p='⁦963⁩ قادم قريباً إلى آيفون وأندرويد. التحميل مجاني والنشر مجاني.',
     ),

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حمّل 963 · Get the 963 app</title>
+<meta name="robots" content="noindex">
+<!-- https://963-app.com/get — the link used in ads and on the website. Android goes to Google Play, iPhone and iPad go
+     to the App Store, everything else sees both buttons and a QR code of this page. Hand-written; the store links are
+     the same as PLAY / APP_STORE in tools/build.py. Add ?stay to see the page on a phone without being redirected.
+     utm_* parameters (for example ?utm_source=meta&utm_campaign=syria_launch) are passed to Google Play as the install
+     referrer, so Play Console shows installs per campaign. -->
+<meta name="description" content="حمّل تطبيق 963 المجاني للسيارات والعقارات والأغراض والمعدات والخدمات في سوريا — Get the free 963 app">
+<meta property="og:title" content="حمّل 963 · Get the 963 app">
+<meta property="og:description" content="سيارات وعقارات وأغراض ومعدات وخدمات في سوريا — Cars, real estate, goods, equipment and services in Syria">
+<meta property="og:image" content="https://963-app.com/assets/og-image.png">
+<meta property="og:url" content="https://963-app.com/get">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#00201d">
+<link rel="canonical" href="https://963-app.com/get">
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/logo.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script>
+(function () {
+  // Runs before anything else loads, so phones leave for the store at once.
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.l7techs.app963';
+  var APP_STORE = 'https://apps.apple.com/app/id6833439652';
+  var q = new URLSearchParams(location.search);
+  var ref = [];
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+    if (q.get(k)) ref.push(k + '=' + encodeURIComponent(q.get(k)));
+  });
+  if (!q.get('utm_source')) ref.unshift('utm_source=' + encodeURIComponent(document.referrer ? 'web' : 'direct'), 'utm_medium=get');
+  var play = PLAY + '&referrer=' + encodeURIComponent(ref.join('&'));
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  window.__get = { play: play, appStore: APP_STORE, os: isAndroid ? 'android' : isIOS ? 'ios' : 'other' };
+  document.documentElement.className = 'os-' + window.__get.os;
+  if (q.has('stay')) return;
+  if (isAndroid) location.replace(play);
+  else if (isIOS) location.replace(APP_STORE);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  body { min-height: 100vh; display: grid; place-items: center; background: radial-gradient(ellipse at top, #0b5a4d, #00201d 70%); color: #f2efe4; }
+  .solo { position: relative; width: 100%; max-width: 460px; padding: 40px 20px; text-align: center; }
+  .solo .pattern { position: fixed; opacity: .8; }
+  .solo > img { width: 108px; height: 108px; margin: 0 auto 20px; border-radius: 30%; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6); }
+  .solo h1 { margin: 0 0 6px; font-size: 28px; line-height: 1.3; }
+  .solo p { margin: 0 0 4px; color: #c4cfc9; }
+  .solo .en { direction: ltr; font-size: 14.5px; color: #9fb0aa; }
+  .solo .status { display: block; margin: 18px 0 20px; min-height: 22px; color: #d9c99c; font-size: 14px; }
+  .solo .btn { width: 100%; margin-bottom: 10px; padding: 14px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .solo .btn svg { width: 22px; height: 22px; flex: none; }
+  .solo .btn-gold { background: #d9c99c; color: #00201d; }
+  .solo .btn-dark { background: rgba(255,255,255,.06); color: #f2efe4; border: 1px solid rgba(217,201,156,.3); }
+  .solo .btn small { font-weight: 500; opacity: .75; direction: ltr; }
+  .solo .qr { display: none; margin: 22px auto 6px; width: 176px; padding: 12px; border-radius: 18px; background: #fff; }
+  .solo .qr img { display: block; width: 100%; height: auto; }
+  .os-other .solo .qr { display: block; }
+  .solo .more { display: inline-block; margin-top: 14px; color: #9fb0aa; font-size: 14px; }
+</style>
+</head>
+<body>
+<main class="solo">
+  <div class="pattern" aria-hidden="true"></div>
+  <img src="/assets/logo.png" alt="963" width="108" height="108">
+  <h1>حمّل تطبيق <bdi dir="ltr">963</bdi></h1>
+  <p>سيارات وعقارات وأغراض ومعدات وخدمات في سوريا</p>
+  <p class="en">Cars, real estate, goods, equipment and services in Syria</p>
+  <span class="status" id="status" role="status"></span>
+
+  <a class="btn btn-gold" id="android" href="https://play.google.com/store/apps/details?id=com.l7techs.app963">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12 3.6 21.7a1 1 0 0 1-.6-.9V3.2c0-.4.2-.7.6-.9z"/><path fill="#FBBC04" d="m16.8 8.6 3.6 2.1c.9.5.9 1.8 0 2.4l-3.6 2.1-3.4-3.2z"/><path fill="#4285F4" d="M3.6 21.7 13.4 12l3.4 3.2L5.2 22c-.6.3-1.2.2-1.6-.3z"/><path fill="#EA4335" d="M3.6 2.3c.4-.5 1-.6 1.6-.3l11.6 6.6-3.4 3.4z"/></svg>
+    Google Play <small>Android</small></a>
+  <a class="btn btn-dark" id="ios" href="https://apps.apple.com/app/id6833439652">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>
+    App Store <small>iPhone · iPad</small></a>
+
+  <div class="qr"><img src="/assets/get-qr.svg" alt="QR code: 963-app.com/get" width="176" height="176"></div>
+  <p class="qr-note" id="qrnote" hidden>امسح الرمز بكاميرا هاتفك<br><span class="en" dir="ltr">Scan with your phone’s camera</span></p>
+
+  <a class="more" href="/ar/">عن التطبيق</a> · <a class="more" href="/">About 963</a>
+</main>
+<script>
+(function () {
+  var g = window.__get, s = document.getElementById('status');
+  function say(ar, en) {
+    s.innerHTML = '';
+    var a = document.createElement('span'), e = document.createElement('span');
+    a.textContent = ar; e.textContent = en; e.className = 'en'; e.dir = 'ltr'; a.style.display = e.style.display = 'block';
+    s.appendChild(a); s.appendChild(e);
+  }
+  document.getElementById('android').href = g.play;
+  if (g.os === 'android') say('جارٍ فتح المتجر…', 'Opening Google Play…');
+  else if (g.os === 'ios') say('جارٍ فتح المتجر…', 'Opening the App Store…');
+  else { say('اختر متجر هاتفك', 'Choose your phone’s store'); document.getElementById('qrnote').hidden = false; }
+  // Put the store for this phone first.
+  if (g.os === 'ios') {
+    var a = document.getElementById('android'), i = document.getElementById('ios');
+    a.className = 'btn btn-dark'; i.className = 'btn btn-gold'; a.parentNode.insertBefore(i, a);
+  }
+})();
+</script>
+</body>
+</html>

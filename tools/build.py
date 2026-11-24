@@ -26,7 +26,9 @@ PRIVACY_UPDATED_EN = 'November 24, 2026'
 PRIVACY_UPDATED_AR = '24 تشرين الثاني 2026'
 PLAY = 'https://play.google.com/store/apps/details?id=com.l7techs.app963'
 APP_STORE = 'https://apps.apple.com/app/id6833439652'
-# Until the app is published the store badges say "Coming soon" and don't link anywhere.
+# Until the app is published the store badges also say "Coming soon". They always link to the store pages, which
+# start working once each store has published the app. Ads and printed material use /get (get/index.html), which
+# sends each phone to its own store.
 LAUNCHED = False
 
 # ───────────────────────── Icons (24×24, stroke) ─────────────────────────
@@ -833,10 +835,9 @@ LD = dict(en=('Toyota Corolla 2014', 'Petrol · Automatic · Homs', '$8,900', 'E
 def stores(h, cls=''):
     def one(href, icon, small, big):
         soon = '' if LAUNCHED else '<span class="soon">%s</span>' % h['soon']
-        tag = 'a href="%s"' % href if LAUNCHED else 'span role="img" aria-label="%s %s — %s"' % (small, big, h['soon'])
-        end = 'a' if LAUNCHED else 'span'
-        return '<%s class="store">%s<span dir="ltr"><small>%s</small><strong>%s</strong></span>%s</%s>' % (
-            tag, icon, small, big, soon, end)
+        label = '' if LAUNCHED else ' aria-label="%s %s — %s"' % (small, big, h['soon'])
+        return '<a class="store" href="%s"%s>%s<span dir="ltr"><small>%s</small><strong>%s</strong></span>%s</a>' % (
+            href, label, icon, small, big, soon)
     return '<div class="stores %s">%s%s</div>' % (
         cls, one(APP_STORE, APPLE, h['dl_apple'], 'App Store'), one(PLAY, PLAY_ICON, h['dl_play'], 'Google Play'))
 

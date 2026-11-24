@@ -6,8 +6,7 @@
 // this script; /listing/?id=<id> is served by /listing/index.html.
 (function () {
   var PKG = 'com.l7techs.app963';
-  // TODO(owner): replace APP_STORE_ID with 963's numeric App Store id.
-  var APP_STORE = 'https://apps.apple.com/app/idAPP_STORE_ID';
+  var APP_STORE = 'https://apps.apple.com/app/id6833439652';
   var UUID = /^[0-9a-fA-F-]{36}$/;
   var m = location.pathname.match(/^\/listing\/([0-9a-fA-F-]{36})\/?$/);
   var q = new URLSearchParams(location.search).get('id');

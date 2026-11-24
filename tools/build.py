@@ -22,6 +22,8 @@ PROVIDER_EN = 'Mohamad Anas Yagop (L7 Techs)'
 PROVIDER_AR = '<span dir="ltr">Mohamad Anas Yagop (L7 Techs)</span>'
 UPDATED_EN = 'November 17, 2026'
 UPDATED_AR = '17 تشرين الثاني 2026'
+PRIVACY_UPDATED_EN = 'November 24, 2026'
+PRIVACY_UPDATED_AR = '24 تشرين الثاني 2026'
 PLAY = 'https://play.google.com/store/apps/details?id=com.l7techs.app963'
 APP_STORE = 'https://apps.apple.com/app/id6833439652'
 # Until the app is published the store badges say "Coming soon" and don't link anywhere.
@@ -238,7 +240,9 @@ def privacy(lang):
              '<p><strong>Information collected automatically</strong></p>' + ul(
                  '<strong>Location (only if you allow it):</strong> your device location while you use the app, to show listings near you on the map and to pin your listing. We do not collect location in the background, and the app works without it.',
                  '<strong>Listing views, taps and favourites:</strong> counted to show owners how their listings perform.',
-                 '<strong>Ad views and taps:</strong> the promoted ads in the app are chosen by our team; we count how often each is shown and tapped, in total. No advertising network or tracker is used.',
+                 '<strong>Ad views and taps:</strong> the promoted ads in the app are chosen by our team; we count how often each is shown and tapped, per day and in total. No advertising network or tracker is used.',
+                 '<strong>App use:</strong> on first use the app creates a random identifier for that installation (not a device identifier). On each day you open the app we record it with the platform (Android or iOS) and, if you are signed in, your account, to count daily and monthly users. Clearing the app’s data or reinstalling it creates a new identifier.',
+                 '<strong>Searches:</strong> the text you type in the listing search, the section and how many results it found, with the same installation identifier and your account if you are signed in, to learn what people look for and what they can’t find. A search that contains a phone number is not kept.',
                  '<strong>Device token:</strong> a push-notification token for your device, removed when you sign out.',
                  '<strong>Technical data:</strong> our servers and providers process your IP address and basic device and request information to deliver the service and keep it secure.') +
              '<p>We do not sell your personal information.</p>'),
@@ -250,7 +254,7 @@ def privacy(lang):
                 'To send the notifications the service relies on: new messages, quotes, bookings, listing and request approvals, matches for saved searches, and for our team, new content to review and reports.',
                 'To answer your messages and requests.',
                 'To prevent fraud, spam and abuse, and to keep the service secure. When a conversation is reported, our team may read it to handle the report.',
-                'To understand how the app is used and improve it.')),
+                'To understand how the app is used and improve it, for example how many people use it each day and which searches find nothing. Only our admin team sees app-use and search records, and they are never used for advertising.')),
             ('3. What other users see',
              '<p>When you publish a listing or request, its details and photos, governorate, city, map location (if you set one), your display or business name, profile photo, bio, ratings and the contact numbers you add are public. Chat messages are seen only by the people in the conversation. A booking request is seen by you and the listing owner. Your email address and the phone number on your account are never shown to other users unless you add them yourself.</p><p>When you call, message or meet another user, or give them your number, address or other details, what they do with it is their responsibility, not 963’s. Share only what the deal needs.</p>'),
             ('4. Service providers we share data with',
@@ -264,6 +268,7 @@ def privacy(lang):
              '<p>Our providers may process data on servers outside your country (our database is hosted in the European Union). We rely on providers that apply industry-standard safeguards.</p>'),
             ('6. Retention', ul(
                 'Account data is kept while your account is active.',
+                'App-use records are deleted after 400 days and search records after 180 days. When you delete your account they are no longer linked to it.',
                 'Listings and requests stay until you delete them or their duration ends; ended, sold or rented-out listings are hidden from the public but kept in your account until you delete them.',
                 'Chat messages are kept while both accounts exist. When you delete your account, your messages are deleted.',
                 'When you delete your account, your profile, listings, requests, quotes, bookings, messages, photos, favourites, saved searches, notifications and device tokens are permanently deleted. Reviews you wrote are deleted. Messages you sent to our support team may be kept, no longer linked to your account, only as long as needed to handle them or as required by law.',
@@ -283,7 +288,7 @@ def privacy(lang):
             ('11. Contact',
              '<p>963 is provided by %s, who is responsible for your data. Questions about this policy? Email <a href="mailto:%s" dir="ltr">%s</a> or use the <a href="contact.html">Contact Us</a> page.</p>' % (PROVIDER_EN, EMAIL, EMAIL)),
         ]
-        head = ('Privacy Policy', 'Last updated: ' + UPDATED_EN,
+        head = ('Privacy Policy', 'Last updated: ' + PRIVACY_UPDATED_EN,
                 'This Privacy Policy explains what information the 963 mobile app and website (“963”, “we”, “us”) collect, how we use it, who we share it with, and the choices you have.')
         title = 'Privacy Policy — 963'
     else:
@@ -301,7 +306,9 @@ def privacy(lang):
              '<p><strong>معلومات تُجمع تلقائياً</strong></p>' + ul(
                  '<strong>الموقع (فقط إذا سمحت بذلك):</strong> موقع جهازك أثناء استخدام التطبيق، لعرض الإعلانات القريبة على الخريطة ولتحديد مكان إعلانك. لا نجمع الموقع في الخلفية، والتطبيق يعمل بدونه.',
                  '<strong>مشاهدات الإعلانات والضغطات والمفضلة:</strong> تُحسب ليعرف أصحاب الإعلانات أداء إعلاناتهم.',
-                 '<strong>مشاهدات الإعلانات الترويجية والضغط عليها:</strong> يختار فريقنا الإعلانات الترويجية في التطبيق، ونحسب عدد مرات ظهور كل منها والضغط عليه بشكل إجمالي. لا نستخدم أي شبكة إعلانية أو أداة تتبّع.',
+                 '<strong>مشاهدات الإعلانات الترويجية والضغط عليها:</strong> يختار فريقنا الإعلانات الترويجية في التطبيق، ونحسب عدد مرات ظهور كل منها والضغط عليه، يومياً وبشكل إجمالي. لا نستخدم أي شبكة إعلانية أو أداة تتبّع.',
+                 '<strong>استخدام التطبيق:</strong> ينشئ التطبيق عند أول استخدام رقماً عشوائياً لذلك التثبيت (ليس معرّفاً للجهاز). في كل يوم تفتح فيه التطبيق نسجّله مع نوع الجهاز (أندرويد أو iOS) وحسابك إن كنت مسجّلاً، لنعرف عدد المستخدمين يومياً وشهرياً. حذف بيانات التطبيق أو إعادة تثبيته يُنشئ رقماً جديداً.',
+                 '<strong>عمليات البحث:</strong> النص الذي تكتبه في البحث عن الإعلانات والقسم وعدد النتائج، مع رقم التثبيت نفسه وحسابك إن كنت مسجّلاً، لنعرف ما يبحث عنه الناس وما لا يجدونه. لا نحفظ أي بحث يحتوي رقم هاتف.',
                  '<strong>رمز الجهاز:</strong> رمز لإرسال الإشعارات إلى جهازك، يُحذف عند تسجيل الخروج.',
                  '<strong>بيانات تقنية:</strong> تعالج خوادمنا ومزوّدونا عنوان IP ومعلومات أساسية عن الجهاز والطلبات لتقديم الخدمة وحمايتها.') +
              '<p>لا نبيع معلوماتك الشخصية.</p>'),
@@ -313,7 +320,7 @@ def privacy(lang):
                 'لإرسال الإشعارات التي تعتمد عليها الخدمة: الرسائل الجديدة، عروض الأسعار، الحجوزات، الموافقة على الإعلانات والطلبات، الإعلانات المطابقة لعمليات البحث المحفوظة، ولفريقنا: المحتوى الجديد الذي ينتظر المراجعة والبلاغات.',
                 'للرد على رسائلك وطلباتك.',
                 'لمنع الاحتيال والرسائل المزعجة وإساءة الاستخدام وحماية الخدمة. عند الإبلاغ عن محادثة قد يقرؤها فريقنا لمعالجة البلاغ.',
-                'لفهم طريقة استخدام التطبيق وتحسينه.')),
+                'لفهم طريقة استخدام التطبيق وتحسينه، مثل عدد من يستخدمونه يومياً وعمليات البحث التي لا تجد نتائج. لا يرى سجلات الاستخدام والبحث إلا فريق الإدارة، ولا تُستخدم للإعلانات أبداً.')),
             ('3. ما يراه المستخدمون الآخرون',
              '<p>عندما تنشر إعلاناً أو طلباً تصبح تفاصيله وصوره والمحافظة والمدينة والموقع على الخريطة (إن حددته) واسمك أو اسم نشاطك وصورتك ونبذتك وتقييماتك وأرقام التواصل التي تضيفها ظاهرة للعموم. رسائل المحادثة يراها طرفا المحادثة فقط. طلب الحجز تراه أنت وصاحب الإعلان. لا يظهر بريدك الإلكتروني ولا رقم هاتف حسابك لأي مستخدم إلا إذا أضفته بنفسك.</p><p>عندما تتصل بمستخدم آخر أو تراسله أو تلتقي به أو تعطيه رقمك أو عنوانك أو بيانات أخرى، فما يفعله بها مسؤوليته هو وليس مسؤولية <bdi>963</bdi>. شارك فقط ما تحتاجه الصفقة.</p>'),
             ('4. مزوّدو الخدمات الذين نشاركهم البيانات',
@@ -327,6 +334,7 @@ def privacy(lang):
              '<p>قد يعالج مزوّدونا البيانات على خوادم خارج بلدك (قاعدة بياناتنا مستضافة في الاتحاد الأوروبي). نعتمد على مزوّدين يطبّقون معايير حماية معروفة في هذا المجال.</p>'),
             ('6. مدة الاحتفاظ', ul(
                 'نحتفظ ببيانات الحساب ما دام الحساب فعالاً.',
+                'تُحذف سجلات استخدام التطبيق بعد 400 يوم وسجلات البحث بعد 180 يوماً، ولا تبقى مرتبطة بحسابك بعد حذفه.',
                 'تبقى الإعلانات والطلبات حتى تحذفها أو تنتهي مدتها؛ الإعلانات المنتهية أو المباعة أو المؤجَّرة تُخفى عن العموم وتبقى في حسابك حتى تحذفها.',
                 'تبقى رسائل المحادثة ما دام الحسابان موجودين، وتُحذف رسائلك عند حذف حسابك.',
                 'عند حذف حسابك يُحذف نهائياً ملفك الشخصي وإعلاناتك وطلباتك وعروضك وحجوزاتك ورسائلك وصورك ومفضلتك وعمليات البحث المحفوظة والإشعارات ورموز الأجهزة، وتُحذف التقييمات التي كتبتها. قد نحتفظ برسائلك إلى فريق الدعم، دون ربطها بحسابك، فقط بقدر ما نحتاج لمعالجتها أو بقدر ما يطلبه القانون.',
@@ -346,7 +354,7 @@ def privacy(lang):
             ('11. التواصل',
              '<p>يقدّم تطبيق <bdi>963</bdi> %s، وهو المسؤول عن بياناتك. لأي سؤال عن هذه السياسة راسلنا على <a href="mailto:%s" dir="ltr">%s</a> أو استخدم صفحة <a href="contact.html">اتصل بنا</a>.</p>' % (PROVIDER_AR, EMAIL, EMAIL)),
         ]
-        head = ('سياسة الخصوصية', 'آخر تحديث: ' + UPDATED_AR,
+        head = ('سياسة الخصوصية', 'آخر تحديث: ' + PRIVACY_UPDATED_AR,
                 'توضح سياسة الخصوصية هذه المعلومات التي يجمعها تطبيق <bdi>963</bdi> وموقعه («<bdi>963</bdi>» أو «نحن»)، وكيف نستخدمها، ومع من نشاركها، والخيارات المتاحة لك.')
         title = 'سياسة الخصوصية — ⁦963⁩'
     body = '''<main><div class="wrap">
